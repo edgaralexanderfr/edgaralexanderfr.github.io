@@ -1,6 +1,23 @@
 ::selection {
-    background: #6b9aae;
+    background: #14ffec;
+    color: #0d7377;
+}
+
+body {
     color: white;
+    background: #212121;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #0d7377;
+}
+
+a:active {
+    color: #5d8393;
 }
 
 div.top-margin {
@@ -16,7 +33,7 @@ div.bottom-margin {
 }
 
 .green {
-    color : #6b9aae;
+    color : #0d7377;
 }
 
 .title-text {
