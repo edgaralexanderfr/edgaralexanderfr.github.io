@@ -1,0 +1,54 @@
+::selection {
+    background: #6b9aae;
+    color: white;
+}
+
+div.top-margin {
+    margin : 30px;
+}
+
+div.bottom-margin {
+    margin : 30px;
+}
+
+.centered-text {
+    text-align : center;
+}
+
+.green {
+    color : #6b9aae;
+}
+
+.title-text {
+    font-size : 36px;
+}
+
+img.clippy {
+    position   : relative;
+    top        : 3px;
+    margin-top : -3px;
+}
+
+div.crypto-icon-col {
+    text-align : right;
+}
+
+div.crypto-input-col {
+    text-align : center;
+}
+
+div.crypto-clipboard-btn-col {
+    text-align : left;
+}
+
+img.crypto-icon {
+    margin-top : 3px;
+}
+
+input.crypto-input {
+    width : 100%;
+}
+
+.thank-you-text {
+    font-size : 28px;
+}

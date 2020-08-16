@@ -1,0 +1,667 @@
+body {
+    margin: 0px;
+    font-family: Arial;
+    font-size: 14px;
+    color: #999999;
+}
+
+::selection {
+    background: #6b9aae;
+    color: white;
+}
+
+a {
+    font-size: 1.15em;
+    color: #999999;
+    text-decoration: none;
+    -webkit-transition: color 0.15s ease-in-out;
+    -moz-transition: color 0.15s ease-in-out;
+    -o-transition: color 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out;
+}
+
+a:hover {
+    color: #6b9aae;
+}
+
+a:active {
+    color: #5d8393;
+}
+
+
+/* begin scrollUpButton */
+
+.scrollUpButton {
+    position: fixed;
+    z-index: 2;
+    top: 10px;
+    right: 18px;
+    width: 48px;
+    border: 0px;
+    border-radius: 50%;
+    outline: 0px;
+    background-color: #6b9aae;
+    background-image: url(../images/go-up-arrow.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 48px;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    display: none;
+}
+
+.scrollUpButton:hover {
+    background-color: #98bdcd;
+}
+
+.scrollUpButton:active {
+    background-color: #6b9aae;
+    -webkit-transition: background-color 0.1s ease-in-out;
+    -moz-transition: background-color 0.1s ease-in-out;
+    -o-transition: background-color 0.1s ease-in-out;
+    transition: background-color 0.1s ease-in-out;
+}
+
+
+/* end scrollUpButton */
+
+
+/* begin activateBar */
+
+.activateBar {
+    position: fixed;
+    z-index: 3;
+    bottom: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    min-width: 1000px;
+    background-color: #fcd300;
+    text-align: right;
+    overflow: hidden;
+}
+
+.activateBarLogo {
+    position: fixed;
+    z-index: 4;
+    bottom: 10px;
+    left: 18px;
+}
+
+.activateBarLink {
+    margin-right: 18px;
+    padding: 10px;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 5px;
+    background-color: #fcd300;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.activateBarLink:visited {
+    color: black;
+}
+
+.activateBarLink:hover {
+    border-color: black;
+    background-color: black;
+    color: white;
+}
+
+.activateBarLink:active {
+    border-color: white;
+    background-color: white;
+    color: black;
+    -webkit-transition: background-color 0.1s ease-in-out;
+    -moz-transition: background-color 0.1s ease-in-out;
+    -o-transition: background-color 0.1s ease-in-out;
+    transition: background-color 0.1s ease-in-out;
+}
+
+
+/* end activateBar */
+
+
+/* begin nav */
+
+.nav {
+    margin: 0px auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 1000px;
+    overflow: hidden;
+}
+
+.navItem,
+.navMobileItem,
+.navLastItem {
+    padding: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border: 1px solid;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-color: #999999;
+    float: left;
+    overflow: hidden;
+}
+
+.navMobileItem {
+    display: none;
+}
+
+.navLastItem {
+    border-right: 0px;
+}
+
+.navIcon {
+    margin-left: 12px;
+    margin-right: 12px;
+    float: right;
+    display: block;
+    -webkit-transition: opacity 0.15s ease-in-out;
+    -moz-transition: opacity 0.15s ease-in-out;
+    -o-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.navIcon:hover {
+    opacity: 0.5;
+    -webkit-transition: opacity 0.1s ease-in-out;
+    -moz-transition: opacity 0.1s ease-in-out;
+    -o-transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.navIcon:active {
+    opacity: 1;
+}
+
+
+/* end nav */
+
+
+/* begin title */
+
+.title,
+.mobileTitle {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    min-width: 1000px;
+    border-bottom: 1px solid;
+    border-color: #999999;
+    overflow: hidden;
+}
+
+.mobileTitle {
+    display: none;
+}
+
+.titleContent {
+    margin: 0px auto;
+    padding: 15px;
+    width: 970px;
+    font-size: 1.1em;
+    overflow: hidden;
+}
+
+
+/* end title */
+
+
+/* begin presentation */
+
+.presentation {
+    margin: 0px auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 1000px;
+    overflow: hidden;
+}
+
+.presentationLeft,
+.presentationRight {
+    width: 500px;
+    float: left;
+    overflow: hidden;
+}
+
+.presentationRight {
+    padding-right: 15px;
+    width: 485px;
+    height: 435px;
+    text-align: center;
+    display: table;
+    float: right;
+}
+
+.presentationLeftPhoto {
+    margin: 15px;
+}
+
+.presentationRightMessage {
+    font-style: italic;
+    font-size: 2em;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.presentationRightMessageTitle {
+    font-style: normal;
+    font-weight: bold;
+    color: #6b9aae;
+}
+
+
+/* end presentation */
+
+
+/* begin projects */
+
+.projects {
+    margin: 0px auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 1000px;
+    height: 435px;
+    overflow: hidden;
+}
+
+.projectsLeft,
+.projectsCenter,
+.projectsRight {
+    height: 435px;
+    float: left;
+    overflow: hidden;
+}
+
+.projectsLeft,
+.projectsRight {
+    width: 125px;
+    display: table;
+}
+
+.projectsRight {
+    text-align: right;
+}
+
+.projectsSliderButtonWrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.projectsSliderLeftButton,
+.projectsSliderRightButton {
+    width: 64px;
+    height: 128px;
+    border: 1px solid;
+    border-color: #999999;
+    border-radius: 5px;
+    outline: 0px;
+    background-color: #dddddd;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-transition: margin 0.2s ease-in-out;
+    -moz-transition: margin 0.2s ease-in-out;
+    -o-transition: margin 0.2s ease-in-out;
+    transition: margin 0.2s ease-in-out;
+}
+
+.projectsSliderLeftButton {
+    margin-left: 15px;
+    background-image: url(../images/left-arrow.png);
+}
+
+.projectsSliderRightButton {
+    margin-right: 15px;
+    background-image: url(../images/right-arrow.png);
+}
+
+.projectsSliderLeftButton:hover {
+    margin-left: 30px;
+}
+
+.projectsSliderLeftButton:active {
+    margin-left: 15px;
+    -webkit-transition: margin 0.1s ease-in-out;
+    -moz-transition: margin 0.1s ease-in-out;
+    -o-transition: margin 0.1s ease-in-out;
+    transition: margin 0.1s ease-in-out;
+}
+
+.projectsSliderRightButton:hover {
+    margin-right: 30px;
+}
+
+.projectsSliderRightButton:active {
+    margin-right: 15px;
+    -webkit-transition: margin 0.1s ease-in-out;
+    -moz-transition: margin 0.1s ease-in-out;
+    -o-transition: margin 0.1s ease-in-out;
+    transition: margin 0.1s ease-in-out;
+}
+
+.projectsCenter {
+    position: relative;
+    width: 750px;
+}
+
+.projectsCenterProject,
+.projectsCenterHiddenProject {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    width: 750px;
+    height: 435px;
+    overflow: hidden;
+}
+
+.projectsCenterHiddenProject {
+    left: 750px;
+}
+
+.projectsCenterProjectLeft,
+.projectsCenterProjectRight {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 435px;
+    display: table;
+    overflow: hidden;
+}
+
+.projectsCenterProjectLeft {
+    width: 420px;
+    float: left;
+}
+
+.projectsCenterProjectLeftImageWrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.projectsCenterProjectLeftImage {
+    border: 1px solid;
+    border-color: #999999;
+    border-radius: 5px;
+}
+
+.projectsCenterProjectRight {
+    width: 270px;
+    text-align: center;
+    float: right;
+}
+
+.projectsCenterProjectRightDescription {
+    font-size: 1.2em;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.projectsCenterProjectRightDescriptionTitle {
+    font-weight: bold;
+    font-size: 1.35em;
+}
+
+
+/* end projects */
+
+
+/* begin about */
+
+.about {
+    margin: 0px auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 1000px;
+    height: 435px;
+    overflow: hidden;
+}
+
+.aboutContent {
+    position: relative;
+    width: 600px;
+    height: 435px;
+    display: table;
+    float: left;
+    overflow: hidden;
+}
+
+.aboutContentSheet,
+.aboutContentHiddenSheet {
+    position: absolute;
+    z-index: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 570px;
+    height: 435px;
+    display: table;
+    overflow: hidden;
+}
+
+.aboutContentHiddenSheet {
+    top: 435px;
+}
+
+.aboutContentSheetMessage {
+    font-size: 1.75em;
+    font-style: italic;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.aboutContentSheetMessageHighlight {
+    color: #6b9aae;
+}
+
+.aboutContentSheetSkillsTitle {
+    font-size: 1.75em;
+    font-weight: bold;
+    color: black;
+    overflow: hidden;
+}
+
+.aboutContentSheetSkillsSkill {
+    margin-top: 15px;
+    margin-right: 15px;
+    width: 80px;
+    height: 80px;
+    display: block;
+    float: left;
+    -webkit-transition: opacity 0.15s ease-in-out;
+    -moz-transition: opacity 0.15s ease-in-out;
+    -o-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.aboutContentSheetSkillsSkill:hover {
+    opacity: 0.5;
+    -webkit-transition: opacity 0.1s ease-in-out;
+    -moz-transition: opacity 0.1s ease-in-out;
+    -o-transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.aboutContentSheetSkillsSkill:active {
+    opacity: 1.0;
+}
+
+.aboutButtons {
+    width: 125px;
+    height: 435px;
+    float: right;
+    overflow: hidden;
+}
+
+.aboutButtonsButton {
+    margin: 0px auto;
+    width: 64px;
+    height: 64px;
+    border: 1px solid;
+    border-color: #999999;
+    outline: 0px;
+    background-color: #dddddd;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+}
+
+.aboutButtonsButton:hover {
+    border-color: black;
+}
+
+.aboutButtonsButton:active {
+    background-color: #cccccc;
+}
+
+.aboutButtonsButtonUp {
+    margin-top: 214px;
+    background-image: url(../images/up-arrow.png);
+}
+
+.aboutButtonsButtonDown {
+    background-image: url(../images/down-arrow.png);
+}
+
+.aboutPhotoContainer {
+    width: 275px;
+    height: 435px;
+    display: table;
+    float: right;
+    overflow: hidden;
+}
+
+.aboutPhotoWrapper {
+    width: 100%;
+    text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.aboutPhoto {
+    margin-right: 15px;
+}
+
+
+/* end about */
+
+
+/* begin contact */
+
+.contact {
+    margin: 0px auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 1000px;
+    height: 435px;
+    overflow: hidden;
+}
+
+.contactLeft {
+    margin-left: 15px;
+    float: left;
+    display: block;
+}
+
+.contactRight {
+    margin-right: 15px;
+    width: 385px;
+    height: 435px;
+    float: right;
+    display: table;
+    overflow: hidden;
+}
+
+.contactRightGmailButton {
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.contactRightGmailButtonLink:hover>.contactRightGmailButtonLinkIcon {
+    width: 175px;
+    height: 175px;
+}
+
+.contactRightGmailButtonLink:active>.contactRightGmailButtonLinkIcon {
+    width: 160px;
+    height: 160px;
+    -webkit-transition: all 0.025s linear;
+    -moz-transition: all 0.025s linear;
+    -o-transition: all 0.025s linear;
+    transition: all 0.025s linear;
+}
+
+.contactRightGmailButtonLink:hover>.contactRightGmailButtonLinkEmail {
+    font-size: 1.1em;
+}
+
+.contactRightGmailButtonLink:active>.contactRightGmailButtonLinkEmail {
+    font-size: 1.05em;
+}
+
+.contactRightGmailButtonLinkIcon {
+    margin: 0px auto;
+    width: 140px;
+    height: 140px;
+    display: block;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
+.contactRightGmailButtonLinkEmail {
+    margin: 0px auto;
+    margin-top: 15px;
+    text-align: center;
+    display: block;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
+
+/* end contact */
+
+
+/* begin footer */
+
+.footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 269px;
+    min-width: 1000px;
+    border-top: 1px solid;
+    border-color: #999999;
+    overflow: hidden;
+}
+
+.footerContent {
+    margin: 0px auto;
+    padding: 15px;
+    width: 970px;
+    font-size: 1.1em;
+    color: #888888;
+    text-align: right;
+    overflow: hidden;
+}
+
+
+/* end footer */
