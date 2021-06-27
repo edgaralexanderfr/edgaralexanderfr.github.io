@@ -97,23 +97,29 @@
 	}
 	/* end presentation */
 	/* begin projects */
-	.projects {
+	.projects,
+    .readBooks {
 		margin-top: 0px;
 		margin-bottom: 0px;
 		width: 100%;
 		height: auto;
 	}
 	.projectsLeft,
-	.projectsRight {
+	.projectsRight,
+    .readBooksLeft,
+    .readBooksRight {
 		display: none;
 	}
-	.projectsCenter {
+	.projectsCenter,
+    .readBooksCenter {
 		position: static;
 		width: 100%;
 		height: auto;
 	}
 	.projectsCenterProject,
-	.projectsCenterHiddenProject {
+	.projectsCenterHiddenProject,
+    .readBooksCenterPage,
+    .readBooksCenterHiddenPage {
 		position: static;
 		width: 100%;
 		height: auto;
@@ -158,7 +164,9 @@
 		float: none;
 	}
 	.aboutContentSheet,
-	.aboutContentHiddenSheet {
+	.aboutContentHiddenSheet,
+    .readBooksCenterPage,
+    .readBooksCenterHiddenPage {
 		position: static;
 		margin-left: 0px;
 		margin-right: 45px;
@@ -171,10 +179,12 @@
 	.aboutContentSheetMessage {
 		font-size: 4em;
 	}
-	.aboutContentSheetSkillsTitle {
+	.aboutContentSheetSkillsTitle,
+    .readBooksTitle {
 		font-size: 4em;
 	}
-	.aboutContentSheetSkillsSkill {
+	.aboutContentSheetSkillsSkill,
+    .readBooksBook {
 		margin-left: 2%;
 		margin-right: 2%;
 		width: 21%;
@@ -320,14 +330,17 @@
 	/* end projects */
 	/* begin about */
 	.aboutContentSheet,
-	.aboutContentHiddenSheet {
+	.aboutContentHiddenSheet,
+    .readBooksCenterPage,
+    .readBooksCenterHiddenPage {
 		padding-top: 22.5px;
 		padding-bottom: 22.5px;
 	}
 	.aboutContentSheetMessage {
 		font-size: 2em;
 	}
-	.aboutContentSheetSkillsTitle {
+	.aboutContentSheetSkillsTitle,
+    .readBooksTitle {
 		font-size: 2em;
 	}
 	.aboutPhotoContainer {
@@ -373,14 +386,17 @@
 	/* end projects */
 	/* begin about */
 	.aboutContentSheet,
-	.aboutContentHiddenSheet {
+	.aboutContentHiddenSheet,
+    .readBooksCenterPage,
+    .readBooksCenterHiddenPage {
 		padding-top: 11.25px;
 		padding-bottom: 11.25px;
 	}
 	.aboutContentSheetMessage {
 		font-size: 1em;
 	}
-	.aboutContentSheetSkillsTitle {
+	.aboutContentSheetSkillsTitle,
+    .readBooksTitle {
 		font-size: 1em;
 	}
 	.aboutPhotoContainer {
