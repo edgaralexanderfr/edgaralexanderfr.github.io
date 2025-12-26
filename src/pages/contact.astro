@@ -1,20 +1,23 @@
 ---
-
+import Body from "../components/page/Body.svelte";
+import Head from "../components/page/Head.svelte";
+import Page from "../components/page/Page.svelte";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Edgar's Portfolio | Contact</title>
-	</head>
-	<body>
-		<h1>Contact</h1>
+<Page>
+	<>
+		<Head title="Contact | Edgar's Portfolio">
+			<meta name="generator" content={Astro.generator} />
+		</Head>
 
-		<p>
-            <a href="mailto:email@example.com">email@example.com</a>
-        </p>
-	</body>
-</html>
+		<Body>
+			<>
+				<h1>Contact</h1>
+
+				<p>
+					<a href="mailto:email@example.com">email@example.com</a>
+				</p>
+			</>
+		</Body>
+	</>
+</Page>

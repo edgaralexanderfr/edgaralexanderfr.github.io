@@ -1,18 +1,24 @@
 ---
-
+import Body from "../components/page/Body.svelte";
+import Head from "../components/page/Head.svelte";
+import Page from "../components/page/Page.svelte";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Welcome to Edgar's Portfolio!</title>
-	</head>
-	<body>
-		<h1>Edgar Franco</h1>
+<Page>
+	<>
+		<Head title="Welcome to Edgar's Portfolio!">
+			<meta name="generator" content={Astro.generator} />
+		</Head>
 
-		<p>Senior Software Engineer and FullStack Web Developer with more than 10 years of experience.</p>
-	</body>
-</html>
+		<Body>
+			<>
+				<h1>Edgar Franco</h1>
+
+				<p>
+					Senior Software Engineer and FullStack Web Developer with
+					more than 10 years of experience.
+				</p>
+			</>
+		</Body>
+	</>
+</Page>

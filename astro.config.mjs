@@ -10,6 +10,9 @@ export default defineConfig({
 
   server: {
       port: 8080,
+      allowedHosts: [
+        "dev.edgaralexanderfr.com",
+      ],
   },
 
   integrations: [svelte()],
