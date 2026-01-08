@@ -6,12 +6,22 @@
     "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview --host",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write .",
+    "lint": "prettier --check ."
   },
   "dependencies": {
     "@astrojs/svelte": "^7.2.4",
+    "@threlte/core": "^8.3.1",
+    "@threlte/extras": "^9.7.1",
     "astro": "^5.16.6",
     "svelte": "^5.46.1",
+    "three": "^0.182.0",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/three": "^0.182.0",
+    "prettier": "^3.7.4",
+    "prettier-plugin-svelte": "^3.4.0"
   }
 }
