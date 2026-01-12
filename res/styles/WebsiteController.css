@@ -206,6 +206,10 @@ a:active {
     overflow: hidden;
 }
 
+.title.notice {
+    color: #fcd300;
+}
+
 .mobileTitle {
     display: none;
 }
