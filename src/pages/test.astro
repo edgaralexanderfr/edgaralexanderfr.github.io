@@ -1,0 +1,66 @@
+---
+import Body from '../components/page/Body.svelte';
+import Head from '../components/page/Head.svelte';
+import Page from '../components/page/Page.svelte';
+---
+
+<Page>
+	<>
+		<Head title="Test">
+			<></>
+		</Head>
+		<Body>
+			<>
+				<style>
+					html,
+					body {
+						margin: 0;
+					}
+				</style>
+				<script>
+					import { GLTFLoader, OrbitControls } from 'three/examples/jsm/Addons.js';
+					import { Scene, PerspectiveCamera, WebGLRenderer, Color } from 'three';
+
+					const url = '/Model.glb';
+
+					const scene = new Scene();
+					const camera = new PerspectiveCamera(
+						50,
+						window.innerWidth / window.innerHeight,
+						0.01,
+						1000
+					);
+					const renderer = new WebGLRenderer();
+					const gltfLoader = new GLTFLoader();
+					const controls = new OrbitControls(camera, renderer.domElement);
+
+					scene.background = new Color(0x4ED7F1);
+
+					camera.position.set(0, 0, 10);
+					camera.rotation.set(-26.57, 0, 0);
+					camera.updateProjectionMatrix();
+
+					renderer.setSize(window.innerWidth, window.innerHeight);
+					renderer.setPixelRatio(window.devicePixelRatio);
+
+					gltfLoader.load(url, (gltf) => {
+						const root = gltf.scene;
+
+						scene.add(root);
+						controls.update();
+
+						const render = () => {
+							requestAnimationFrame(render);
+
+							renderer.render(scene, camera);
+						};
+
+						render();
+					});
+
+					document.body.appendChild(renderer.domElement);
+				</script>
+			</>
+		</Body>
+	</>
+</Page>
