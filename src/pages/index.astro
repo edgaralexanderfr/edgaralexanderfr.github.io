@@ -1,13 +1,17 @@
 ---
-import Body from "../components/page/Body.svelte";
-import Head from "../components/page/Head.svelte";
-import Page from "../components/page/Page.svelte";
+import ClientRouter from 'astro/components/ClientRouter.astro';
+import Body from '../components/page/Body.svelte';
+import Head from '../components/page/Head.svelte';
+import Page from '../components/page/Page.svelte';
 ---
 
 <Page>
 	<>
 		<Head title="Welcome to Edgar's Portfolio!">
-			<meta name="generator" content={Astro.generator} />
+			<>
+				<meta name="generator" content={Astro.generator} />
+				<ClientRouter />
+			</>
 		</Head>
 
 		<Body>
@@ -15,9 +19,17 @@ import Page from "../components/page/Page.svelte";
 				<h1>Edgar Franco</h1>
 
 				<p>
-					Senior Software Engineer and FullStack Web Developer with
-					more than 10 years of experience.
+					Senior Software Engineer and FullStack Web Developer with more than 10 years of
+					experience.
 				</p>
+
+				<nav>
+					<ul>
+						<li>
+							<a href="/contact">Contact</a>
+						</li>
+					</ul>
+				</nav>
 			</>
 		</Body>
 	</>

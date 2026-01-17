@@ -1,13 +1,17 @@
 ---
-import Body from "../components/page/Body.svelte";
-import Head from "../components/page/Head.svelte";
-import Page from "../components/page/Page.svelte";
+import ClientRouter from 'astro/components/ClientRouter.astro';
+import Body from '../components/page/Body.svelte';
+import Head from '../components/page/Head.svelte';
+import Page from '../components/page/Page.svelte';
 ---
 
 <Page>
 	<>
 		<Head title="Contact | Edgar's Portfolio">
-			<meta name="generator" content={Astro.generator} />
+			<>
+				<meta name="generator" content={Astro.generator} />
+				<ClientRouter />
+			</>
 		</Head>
 
 		<Body>
@@ -17,6 +21,14 @@ import Page from "../components/page/Page.svelte";
 				<p>
 					<a href="mailto:email@example.com">email@example.com</a>
 				</p>
+
+				<nav>
+					<ul>
+						<li>
+							<a href="/">Home</a>
+						</li>
+					</ul>
+				</nav>
 			</>
 		</Body>
 	</>
