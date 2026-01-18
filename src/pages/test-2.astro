@@ -1,0 +1,17 @@
+---
+import Body from '../components/page/Body.svelte';
+import Head from '../components/page/Head.svelte';
+import Page from '../components/page/Page.svelte';
+import Canvas from '../components/Canvas.svelte';
+---
+
+<Page>
+	<>
+		<Head title="Test 2">
+			<></>
+		</Head>
+		<Body>
+			<Canvas client:only="svelte" />
+		</Body>
+	</>
+</Page>
