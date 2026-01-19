@@ -25,7 +25,7 @@ Command: npx @threlte/gltf@3.0.1 public/Model.glb --types
 
 	ref = new Group();
 
-	type ActionName = 'Edgar.Armature' | 'Edgar.Armature.001';
+	type ActionName = 'Edgar.Armature' | 'Edgar.Armature.001' | 'Camera.001' | 'Door.001' | 'Lid.001';
 	type GLTFResult = {
 		nodes: {
 			GlassesModel001: THREE.Mesh;
@@ -150,6 +150,15 @@ Command: npx @threlte/gltf@3.0.1 public/Model.glb --types
 				/>
 			</T.Group>
 			<T.Group name="NurbsPath" />
+			<T.PerspectiveCamera
+				name="Camera001"
+				far={100}
+				near={0.1}
+				fov={22.9}
+				position={[15.66, 0.23, 16.06]}
+				rotation={[0.01, 0.77, -0.01]}
+				makeDefault
+			/>
 			<T.Mesh
 				name="Floor001"
 				geometry={gltf.nodes.Floor001.geometry}
@@ -185,6 +194,7 @@ Command: npx @threlte/gltf@3.0.1 public/Model.glb --types
 					geometry={gltf.nodes.Door001.geometry}
 					material={gltf.materials.Wood}
 					position={[3.37, -0.65, 0.12]}
+					rotation={[0, -1.54, 0]}
 				>
 					<T.Mesh
 						name="Knob1001"
