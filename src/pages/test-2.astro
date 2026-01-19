@@ -11,7 +11,7 @@ import Canvas from '../components/Canvas.svelte';
 			<></>
 		</Head>
 		<Body>
-			<Canvas client:only="svelte" />
+			<Canvas client:only="svelte" transition:persist="3d-scene" />
 		</Body>
 	</>
 </Page>

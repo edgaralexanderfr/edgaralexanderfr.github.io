@@ -1,0 +1,80 @@
+---
+import Body from '../components/page/Body.svelte';
+import Head from '../components/page/Head.svelte';
+import Page from '../components/page/Page.svelte';
+---
+
+<Page>
+	<>
+		<Head title="Test 3">
+			<></>
+		</Head>
+		<Body>
+			<>
+				<style>
+					html,
+					body {
+						margin: 0;
+					}
+				</style>
+				<script>
+					import { GLTFLoader, OrbitControls } from 'three/examples/jsm/Addons.js';
+					import {
+						Scene,
+						PerspectiveCamera,
+						WebGLRenderer,
+						Color,
+						AnimationMixer,
+						LoopOnce
+					} from 'three';
+
+					const url = '/Model.glb';
+
+					const scene = new Scene();
+					const camera = new PerspectiveCamera(
+						50,
+						window.innerWidth / window.innerHeight,
+						0.01,
+						1000
+					);
+					const renderer = new WebGLRenderer();
+					const gltfLoader = new GLTFLoader();
+					const controls = new OrbitControls(camera, renderer.domElement);
+
+					scene.background = new Color(0x4ed7f1);
+
+					camera.position.set(0, 0, 10);
+					camera.rotation.set(-26.57, 0, 0);
+					camera.updateProjectionMatrix();
+
+					renderer.setSize(window.innerWidth, window.innerHeight);
+					renderer.setPixelRatio(window.devicePixelRatio);
+
+					gltfLoader.load(url, (gltf) => {
+						const root = gltf.scene;
+						const animations = gltf.animations;
+						const mixer = new AnimationMixer(root);
+						const action = mixer.clipAction(animations[1], root);
+
+						scene.add(root);
+						controls.update();
+						action.clampWhenFinished = true;
+						action.setLoop(LoopOnce, 1);
+						action.play();
+
+						const render = () => {
+							requestAnimationFrame(render);
+
+							renderer.render(scene, camera);
+							mixer.update(1 / 60);
+						};
+
+						render();
+					});
+
+					document.body.appendChild(renderer.domElement);
+				</script>
+			</>
+		</Body>
+	</>
+</Page>
