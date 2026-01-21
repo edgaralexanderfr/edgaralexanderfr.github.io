@@ -11,10 +11,10 @@
     "lint": "prettier --check ."
   },
   "dependencies": {
-    "@astrojs/svelte": "^7.2.4",
+    "@astrojs/svelte": "^7.2.5",
     "@threlte/core": "^8.3.1",
     "@threlte/extras": "^9.7.1",
-    "astro": "^5.16.6",
+    "astro": "^5.16.12",
     "svelte": "^5.46.1",
     "three": "^0.182.0",
     "typescript": "^5.9.3"
