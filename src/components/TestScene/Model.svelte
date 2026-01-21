@@ -157,7 +157,7 @@ Command: npx @threlte/gltf@3.0.1 public/Model.glb --types
 				fov={22.9}
 				position={[15.66, 0.23, 16.06]}
 				rotation={[0.01, 0.77, -0.01]}
-				makeDefault
+        makeDefault
 			/>
 			<T.Mesh
 				name="Floor001"

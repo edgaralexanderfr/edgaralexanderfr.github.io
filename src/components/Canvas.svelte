@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { T, Canvas } from '@threlte/core';
-	import Model from './Model.svelte';
+	import Model from './TestScene/Model.svelte';
 	import { ACESFilmicToneMapping, LoopOnce } from 'three';
 
 	let scene = $state<Model>();
