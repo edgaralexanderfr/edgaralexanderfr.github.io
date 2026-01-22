@@ -25,7 +25,7 @@ Command: npx @threlte/gltf@3.0.1 public/models/model/testscene1.glb --types
 
 	ref = new Group();
 
-	type ActionName = 'Idle' | 'Walk' | 'CameraAction' | 'DoorAction';
+	type ActionName = 'Edgar.Armature' | 'Camera' | 'Door';
 	type GLTFResult = {
 		nodes: {
 			GlassesModel: THREE.Mesh;

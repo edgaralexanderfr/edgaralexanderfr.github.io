@@ -6,9 +6,9 @@
 	let scene = $state<Model>();
 
 	const actions = $derived(scene?.actions);
-	const walkAction = $derived($actions?.['Walk']);
-	const cameraAction = $derived($actions?.['CameraAction']);
-	const doorAction = $derived($actions?.['DoorAction']);
+	const walkAction = $derived($actions?.['Edgar.Armature']);
+	const cameraAction = $derived($actions?.['Camera']);
+	const doorAction = $derived($actions?.['Door']);
 
 	$effect(() => {
 		if (walkAction) {
