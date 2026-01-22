@@ -1,0 +1,17 @@
+---
+import Body from '../components/page/Body.svelte';
+import Head from '../components/page/Head.svelte';
+import Page from '../components/page/Page.svelte';
+import Scene from '../components/models/model/TestScene2.svelte';
+---
+
+<Page>
+	<>
+		<Head title="Test Scene 2">
+			<></>
+		</Head>
+		<Body>
+			<Scene client:only="svelte" />
+		</Body>
+	</>
+</Page>
