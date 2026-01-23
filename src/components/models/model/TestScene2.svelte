@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { T, Canvas } from '@threlte/core';
-	import Model from '../../../models/model/TestScene2.svelte';
 	import { ACESFilmicToneMapping, LoopOnce } from 'three';
+	import { T, Canvas } from '@threlte/core';
+	import SceneCleaner from '../../SceneCleaner.svelte';
+	import Model from '../../../models/model/TestScene2.svelte';
 
 	let scene = $state<Model>();
 
@@ -40,8 +41,23 @@
 	});
 </script>
 
-<Canvas toneMapping={ACESFilmicToneMapping} shadows={false}>
-	<T.Color attach="background" args={['#4ED7F1']} />
+<div>
+	<Canvas toneMapping={ACESFilmicToneMapping} shadows={false}>
+		<SceneCleaner>
+			<T.Color attach="background" args={['#4ED7F1']} />
 
-	<Model bind:this={scene} />
-</Canvas>
+			<Model bind:this={scene} />
+		</SceneCleaner>
+	</Canvas>
+</div>
+
+<style>
+	div {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+	}
+</style>

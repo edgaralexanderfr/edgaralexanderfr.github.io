@@ -4,6 +4,6 @@
 	const { children }: { children: Snippet } = $props();
 </script>
 
-<body style="height: 100%; margin: 0; width: 100%;">
+<body>
 	{@render children()}
 </body>
