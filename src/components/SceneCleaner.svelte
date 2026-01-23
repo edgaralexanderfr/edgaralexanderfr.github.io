@@ -1,3 +1,13 @@
+<!--
+
+For more information about freeing and cleaning up Three.js resources,
+feel free to read the following links:
+
+- https://threejs.org/manual/?q=dispo#en/how-to-dispose-of-objects
+- https://discourse.threejs.org/t/when-to-dispose-how-to-completely-clean-up-a-three-js-scene/1549
+
+-->
+
 <script lang="ts">
 	import { useThrelte } from '@threlte/core';
 	import { onDestroy } from 'svelte';
